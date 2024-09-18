@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import clx from "classnames";
 
 interface NavLinksProps {
@@ -17,35 +18,35 @@ const NavLinks = ({isMobile = false} : NavLinksProps) => {
 
   const linkStyle = clx('link uppercase', {
     'text-xs': !isMobile,
-    'text-xl leading-1 tracking-widest text-white': isMobile
+    'text-2xl leading-1 tracking-widest text-white': isMobile
   })
 
   const btnStyle = clx('btn btn-accent uppercase', {
     'text-xs': !isMobile,
-    'text-xl leading-1 tracking-widest bg-transparent text-white border-white w-full hover:bg-transparent': isMobile
+    'text-2xl leading-1 tracking-widest bg-transparent text-white border-white w-full hover:bg-transparent': isMobile
   })
 
   return (
     <ul className={listStyle}>
       <li className={listItemStyle}>
-        <a className={linkStyle} href="/">
+        <Link to="/" className={linkStyle}>
           Features
-        </a>
+        </Link>
       </li>
       <li className={listItemStyle}>
-        <a className={linkStyle} href="/">
+        <Link to="/" className={linkStyle}>
           Pricing
-        </a>
+        </Link>
       </li>
       <li className={listItemStyle}>
-        <a className={linkStyle} href="/">
+        <Link to="/" className={linkStyle}>
           Contact
-        </a>
+        </Link>
       </li>
       <li className={listItemStyle}>
-        <a className={btnStyle} href="/">
+        <Link to="/" className={btnStyle}>
           Login
-        </a>
+        </Link>
       </li>
     </ul>
   );
@@ -64,12 +65,12 @@ export const MobileNav = () => {
     <div className="fixed inset-0 bg-secondary-dark/95 z-20 pt-[100px] px-6 pb-6 flex flex-col justify-between">
       <NavLinks isMobile />
       <div className="flex space-x-10 w-full justify-center">
-        <a href="/">
+        <Link to="https://www.facebook.com/">
           <i className={`icon-icon-facebook ${commonIconClasses}`}></i>
-        </a>
-        <a href="/">
+        </Link>
+        <Link to="https://x.com/">
           <i className={`icon-icon-twitter ${commonIconClasses}`}></i>
-        </a>
+        </Link>
       </div>
     </div>
   );

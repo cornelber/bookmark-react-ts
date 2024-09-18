@@ -9,17 +9,22 @@ const Header = () => {
   // Memoize the function to prevent unnecessary re-renders
   const toggleMenu = useCallback(() => {
     setIsMenuOpen((prevState) => !prevState);
-  }, []); // toggleMenu will only be created once
+  }, []); // toggleMenu doesn't get recreated on every render
 
 
   useEffect(() => {
-    document.body.style.overflow = isMenuOpen ? "hidden" : "auto";
+    document.documentElement.style.overflowY = isMenuOpen ? "hidden" : "";
+
+    return () => {
+      // Cleanup function to reset the overflow style
+      document.documentElement.style.overflowY = '';
+    };
   }, [isMenuOpen]);
 
   return (
-    <header className='sticky top-0 md:pt-6 px-6 bg-white'>
+    <header className='sticky top-0 md:mt-6 px-6 bg-white z-50'>
         <div className="container mx-auto py-6 flex justify-between items-center">
-            <BookmarkLogo className='z-40' isMenuOpen={isMenuOpen}/>
+            <BookmarkLogo className='z-50' isMenuOpen={isMenuOpen}/>
             <Navbar isMobileMenuOpen={isMenuOpen} />
             <BurgerMenuButton isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} />
         </div>

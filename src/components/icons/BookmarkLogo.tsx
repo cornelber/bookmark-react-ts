@@ -1,4 +1,4 @@
-// import clx from "classnames";
+import { Link } from "react-router-dom";
 
 interface BookmarkLogoProps {
   isMenuOpen: boolean;
@@ -6,7 +6,7 @@ interface BookmarkLogoProps {
 }
 
 export const BookmarkLogo = ({isMenuOpen, className = ""}: BookmarkLogoProps) => (
-  <a href="/" className={className}>
+  <Link to="/" className={className}>
     <svg width="148" height="25" xmlns="http://www.w3.org/2000/svg">
       <g fill="none" fillRule="evenodd">
         <path
@@ -31,5 +31,5 @@ export const BookmarkLogo = ({isMenuOpen, className = ""}: BookmarkLogoProps) =>
         </g>
       </g>
     </svg>
-  </a>
+  </Link>
 );
