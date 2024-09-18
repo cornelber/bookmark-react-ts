@@ -1,20 +1,12 @@
-import React, { useState } from 'react'
-import NavItems from './NavItems'
-import NavBurger from './NavBurger'
+import React from "react";
+import {DesktopNav, MobileNav} from "./NavItems";
 
-const Navbar = () => {
-    const [isOpen, setIsOpen] = useState(false);
-
-    const toggleMenu = () => {
-        setIsOpen(!isOpen);
-    }
-
-  return (
-    <nav>
-        <NavBurger isOpen={isOpen} toggleMenu={toggleMenu} />
-        <NavItems />
-    </nav>
-  )
+interface NavbarProps {
+  isMobileMenuOpen: boolean;
 }
 
-export default Navbar
+const Navbar = ({isMobileMenuOpen} : NavbarProps) => {
+  return <nav> {isMobileMenuOpen ? <MobileNav /> : <DesktopNav />} </nav>
+};
+
+export default Navbar;

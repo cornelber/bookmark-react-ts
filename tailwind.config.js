@@ -7,6 +7,7 @@ export default {
   theme: {
     fontFamily: {
       sans: ['"Rubik"', "sans-serif"],
+      icomoon: ['icomoon', 'sans-serif'],
     },
     extend: {
       colors: {
@@ -18,35 +19,41 @@ export default {
           'gray': 'hsl(229, 8%, 60%)',
           'dark': 'hsl(229, 31%, 21%)',
         },
+        icon: {
+          'white': 'hsl(0, 0%, 100%)',
+          'red': 'hsl(0, 94%, 66%)',
+        }
       },
       fontSize: {
+        icon: '24px',
         xs: ['13px', {
           lineHeight: '17px',
           letterSpacing: '1.5px',
         }],
         sm: '14px',
         base: '16px',
-        xl: '20px',
-        '2xl': '25.008px',
-        '3xl': '31.248px',
-        '4xl': '39.056px',
-        '5xl': '48.832px',
+        xl: ['20px', {
+          letterSpacing: '0.25px',
+        }],
+        '2xl': '25px',
+        '3xl': '31px',
+        '4xl': '39px',
+        '5xl': '48px',
       },
-
-
-      // lineHeight: {
-      //   '1': '1.0625rem',
-      //   '2': '1.75rem',
-      //   '3': '2rem',
-      //   '4': '2.5rem',
-      //   '5': '3.25rem',
-      // },
-      // letterSpacing: {
-      //   'tight': '-0.0094rem',
-      //   'normal': '0',
-      //   'wide': '0.0156rem',
-      //   'wider': '0.0938rem',
-      // },
+      lineHeight: {
+        '1': '17px',
+        '2': '28px',
+        '3': '32px',
+        '4': '40px',
+        '5': '52px',
+      },
+      letterSpacing: {
+        'tight': '-0.15px',
+        'normal': '0',
+        'wide': '0.25px',
+        'wider': '1.5px',
+        'widest': '2.3px',
+      },
     },
   },
   plugins: [
