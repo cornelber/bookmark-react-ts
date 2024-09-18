@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useCallback, useEffect, useState } from 'react'
 import { BookmarkLogo } from '../components/icons/BookmarkLogo'
 import Navbar from '../components/Navbar'
 import BurgerMenuButton from '../components/BurgerMenuButton';
@@ -6,9 +6,11 @@ import BurgerMenuButton from '../components/BurgerMenuButton';
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  }
+  // Memoize the function to prevent unnecessary re-renders
+  const toggleMenu = useCallback(() => {
+    setIsMenuOpen((prevState) => !prevState);
+  }, []); // toggleMenu will only be created once
+
 
   useEffect(() => {
     document.body.style.overflow = isMenuOpen ? "hidden" : "auto";
