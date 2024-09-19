@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 interface BookmarkLogoProps {
-  isMenuOpen: boolean;
+  isMenuOpen?: boolean;
   className?: string;
 }
 
