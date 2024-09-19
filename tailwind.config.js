@@ -50,7 +50,10 @@ export default {
           letterSpacing: '1.5px',
         }],
         sm: '15px',
-        base: '16px',
+        base: ['16px', {
+          lineHeight: '17px',
+          letterSpacing: '0.5px',
+        }],
         xl: ['18px', {
           lineHeight: '28px',
         }],

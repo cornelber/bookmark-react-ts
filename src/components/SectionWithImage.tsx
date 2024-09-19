@@ -10,16 +10,18 @@ export interface SectionWithImageProps {
     buttons: ButtonProps[];
     imageSrc: string;
     imageAlt: string;
+    imageClassName?: string;
     reverse?: boolean;
 }
 
 const SectionWithImage = ({
   title,
-  titleClassName,
+  titleClassName = '',
   description,
   buttons,
   imageSrc,
   imageAlt,
+  imageClassName = '',
   reverse = false,
 }: SectionWithImageProps) => {
   const sectionClasses = clx(
@@ -38,18 +40,19 @@ const SectionWithImage = ({
   );
 
   const imageClasses = clx(
-    "self-center lg:absolute lg:top-[-8%] xl:top-[-10%] 2xl:top-[-20%] lg:w-[120%] lg:max-w-none",
-    { "right-[-7%]": reverse, "left-[-7%]": !reverse }
+    !imageClassName && "self-center lg:absolute lg:top-[-8%] xl:top-[-10%] 2xl:top-[-20%] lg:w-[120%] lg:max-w-none",
+    { "right-[-7%]": reverse && !imageClassName, "left-[-7%]": !reverse && !imageClassName },
+    imageClassName
   );
 
   return (
     <section className={sectionClasses}>
-      <div className="basis-1/2 text-center md:text-left">
+      <div className="flex flex-col basis-1/2 items-center text-center md:text-left md:items-start justify-center">
         <h1 className={titleClasses}>{title}</h1>
         <p className="text-[15px] sm:text-xl text-secondary-dark/50 pb-8">
           {description}
         </p>
-        <div className="flex space-x-4 justify-center md:justify-start">
+        <div className="flex space-x-4 self-center md:self-start">
           {buttons.map((button, index) => (
             <Button
               key={index}
