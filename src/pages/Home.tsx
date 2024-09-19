@@ -4,6 +4,7 @@ import SectionWithImage from "../components/SectionWithImage";
 import heroIllustration1 from "../assets/illustration-hero.svg";
 import TabsSection from "../components/TabsSection";
 import DownloadSection from "../components/DownloadSection";
+import FAQSection from "../components/FAQSection";
 
 const Home = () => {
   return (
@@ -22,6 +23,7 @@ const Home = () => {
       />
       <TabsSection />
       <DownloadSection />
+      <FAQSection />
     </Layout>
   );
 };
