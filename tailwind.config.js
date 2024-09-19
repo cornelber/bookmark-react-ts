@@ -57,7 +57,10 @@ export default {
         '2xl': ['20px', {
           letterSpacing: '0.25px',
         }],
-        '3xl': '32px',
+        '3xl': ['32px', {
+          lineHeight: '52px',
+          letterSpacing: '-0.1px',
+        }],
         '4xl': ['48px', {
           lineHeight: '52px',
           letterSpacing: '-0.15px',
