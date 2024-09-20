@@ -1,13 +1,13 @@
 import React from "react";
 import { footerNavData } from "../data/navData";
-import EmailSubscriptionSection from "../components/EmailSubscriptionSection";
+import SubscriptionSection from "../components/sections/SubscriptionSection";
 import Navbar from "../components/nav/Navbar";
 
 const Footer = () => {
 
   return (
     <footer className="bg-secondary-dark text-white">
-      <EmailSubscriptionSection />
+      <SubscriptionSection />
       <Navbar items={footerNavData} isFooter />
     </footer>
   );
