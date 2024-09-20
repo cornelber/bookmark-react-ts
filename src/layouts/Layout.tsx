@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react";
+import { ReactNode } from "react";
 import clx from "classnames";
 import Footer from "./Footer";
 

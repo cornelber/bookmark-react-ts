@@ -1,4 +1,3 @@
-import React from "react";
 import { Button } from "./Button";
 import bgDots from '../assets/bg-dots.svg';
 import { CardProps } from "../types/interfaces";

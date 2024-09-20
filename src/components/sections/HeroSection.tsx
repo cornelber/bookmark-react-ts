@@ -1,4 +1,3 @@
-import React from 'react'
 import { BlockWithImageProps } from '../../types/interfaces';
 import SectionContainer from '../SectionContainer'
 import BlockWithImage from '../BlockWithImage'

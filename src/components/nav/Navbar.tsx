@@ -1,4 +1,3 @@
-import React from 'react';
 import { NavbarItemProps } from '../../types/interfaces';
 import useToggleMenu from '../../hooks/useToggleMenu';
 import GenericNavbarList from './GenericNavbarList';

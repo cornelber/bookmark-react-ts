@@ -1,4 +1,3 @@
-import React from 'react'
 import { FaqDataProps } from '../../types/interfaces'
 import SectionContainer from '../SectionContainer'
 import SectionHeader from '../SectionHeader'

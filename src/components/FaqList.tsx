@@ -1,4 +1,3 @@
-import React from "react";
 import Faq from "./Faq";
 import { FaqListProps } from "../types/interfaces";
 

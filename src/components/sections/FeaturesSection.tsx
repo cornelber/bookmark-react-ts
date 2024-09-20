@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from "react";
+import { useCallback, useState } from "react";
 import { FeaturesDataProps } from "../../types/interfaces";
 import SectionContainer from "../SectionContainer";
 import SectionHeader from "../SectionHeader";

@@ -1,4 +1,3 @@
-import React from 'react';
 import NavbarItem from './NavbarItem';
 import clx from 'classnames';
 import { NavbarItemProps } from '../../types/interfaces';

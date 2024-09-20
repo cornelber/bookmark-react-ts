@@ -1,4 +1,3 @@
-import React from 'react';
 import { ButtonProps } from '../types/interfaces';
 import clx from 'classnames';
 

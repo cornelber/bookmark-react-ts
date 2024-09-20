@@ -1,4 +1,3 @@
-import React from 'react'
 import { headerNavData } from '../data/navData'
 import Navbar from '../components/nav/Navbar'
 

@@ -1,4 +1,3 @@
-import React from "react";
 import clx from "classnames";
 import { BlockWithImageProps } from "../types/interfaces";
 import { Button } from "./Button";

@@ -1,4 +1,3 @@
-import React from "react";
 import SectionContainer from "../SectionContainer";
 import SectionHeader from "../SectionHeader";
 import CardList from "../CardList";

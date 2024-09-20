@@ -1,4 +1,3 @@
-import React from "react";
 import { TabButton } from "../components/Button";
 
 interface TabsProps {

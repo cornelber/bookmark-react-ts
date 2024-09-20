@@ -1,4 +1,3 @@
-import React from "react";
 import Layout from "../layouts/Layout";
 import DownloadSection from "../components/sections/DownloadSection";
 import FaqSection from "../components/sections/FaqSection";

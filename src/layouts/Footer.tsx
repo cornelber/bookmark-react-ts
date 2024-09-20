@@ -1,4 +1,3 @@
-import React from "react";
 import { footerNavData } from "../data/navData";
 import SubscriptionSection from "../components/sections/SubscriptionSection";
 import Navbar from "../components/nav/Navbar";
