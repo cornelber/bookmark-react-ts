@@ -1,68 +1,70 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+/* Font */
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300..900&display=swap');
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+/* Tailwind Directives */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
+/* Custom Base Styles */
+@layer base {
+  body {
+    font-family: 'Rubik', sans-serif;
+  }
+}
+
+/* Icons Font Face */
+@font-face {
+  font-family: 'icomoon';
+  src:  url('/src/vendors/fonts/icomoon.eot?qyot1v');
+  src:  url('/src/vendors/fonts/icomoon.eot?qyot1v#iefix') format('embedded-opentype'),
+        url('/src/vendors/fonts/icomoon.ttf?qyot1v') format('truetype'),
+        url('/src/vendors/fonts/icomoon.woff?qyot1v') format('woff'),
+        url('/src/vendors/fonts/icomoon.svg?qyot1v#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+/* Custom Icon Styles */
+i {
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+.icon-icon-arrow:before {
+  content: "\e900";
 }
 
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+.icon-icon-error .path1:before {
+  content: "\e902";
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.icon-icon-error .path2:before {
+  content: "\e903";
+  margin-left: -1em;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+.icon-icon-error .path3:before {
+  content: "\e904";
+  margin-left: -1em;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.icon-icon-facebook:before {
+  content: "\e905";
+}
+
+.icon-icon-twitter:before {
+  content: "\e906";
+}
+
+html {
+  overflow-x: hidden;
 }
