@@ -1,20 +1,9 @@
 import React from "react";
 import clx from "classnames";
-import { ButtonProps } from "../types/interfaces";
+import { BlockWithImageProps } from "../types/interfaces";
 import { Button } from "./Button";
 
-export interface SectionWithImageProps {
-    title: string;
-    titleClassName?: string;
-    description: string;
-    buttons: ButtonProps[];
-    imageSrc: string;
-    imageAlt: string;
-    imageClassName?: string;
-    reverse?: boolean;
-}
-
-const SectionWithImage = ({
+const BlockWithImage = ({
   title,
   titleClassName = '',
   description,
@@ -23,9 +12,10 @@ const SectionWithImage = ({
   imageAlt,
   imageClassName = '',
   reverse = false,
-}: SectionWithImageProps) => {
-  const sectionClasses = clx(
-    "flex flex-col-reverse gap-16 min-h-[386px] mt-28 mb-48",
+}: BlockWithImageProps) => {
+    
+  const wrapperClasses = clx(
+    "flex flex-col-reverse gap-16 min-h-[386px]",
     { "md:flex-row-reverse": reverse, "md:flex-row": !reverse }
   );
 
@@ -46,7 +36,7 @@ const SectionWithImage = ({
   );
 
   return (
-    <section className={sectionClasses}>
+    <div className={wrapperClasses}>
       <div className="flex flex-col basis-1/2 items-center text-center md:text-left md:items-start justify-center">
         <h1 className={titleClasses}>{title}</h1>
         <p className="text-[15px] sm:text-xl text-secondary-dark/50 pb-8">
@@ -67,8 +57,8 @@ const SectionWithImage = ({
         <span className={decorativeSpanClasses} />
         <img className={imageClasses} src={imageSrc} alt={imageAlt} />
       </div>
-    </section>
+    </div>
   );
 };
 
-export default SectionWithImage;
+export default BlockWithImage;
