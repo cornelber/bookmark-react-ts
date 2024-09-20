@@ -4,7 +4,7 @@ This project is a **Bookmark Landing Page**, built as a part of a challenge from
 
 ## Demo
 
-Check out the live demo [here](https://bookmark-react-gyedja6rc-berlions-projects.vercel.app/).
+Check out the live demo 👉[here](https://bookmark-react-gyedja6rc-berlions-projects.vercel.app/){:target="_blank"}.
 
 ![Screenshot of the Bookmark Landing Page](public/showcase-challenge-desk.jpg)
 
