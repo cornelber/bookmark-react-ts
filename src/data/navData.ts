@@ -1,12 +1,12 @@
 export const headerNavData = [
-    { to: "/", label: "Features" },
-    { to: "/", label: "Pricing" },
-    { to: "/", label: "Contact" },
-    { to: "/", label: "Login", isButton: true }
+    { to: "/features", label: "Features" },
+    { to: "/pricing", label: "Pricing" },
+    { to: "/contact", label: "Contact" },
+    { to: "/login", label: "Login", isButton: true }
 ];
 
 export const footerNavData = [
-    { to: "/", label: "Features" },
-    { to: "/", label: "Pricing" },
-    { to: "/", label: "Contact" }
+    { to: "/features", label: "Features" },
+    { to: "/pricing", label: "Pricing" },
+    { to: "/contact", label: "Contact" }
 ];
