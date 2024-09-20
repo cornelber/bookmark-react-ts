@@ -5,14 +5,12 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   screens: {
-    // Min-width breakpoints (default)
     'sm': '640px',
     'md': '768px',
     'lg': '1024px',
     'xl': '1280px',
     '2xl': '1536px',
 
-    // Max-width breakpoints (you can define here max-width breakpoints)
     'max-sm': {'max': '639px'},
     'max-md': {'max': '767px'},
     'max-lg': {'max': '1023px'},
